@@ -5,7 +5,7 @@ const questionsMenu = [
   {
     type: 'list',
     name: 'option',
-    message: 'what do you want to do?',
+    message: 'What do you want to do?',
     choices: [
       {
         value: '1',

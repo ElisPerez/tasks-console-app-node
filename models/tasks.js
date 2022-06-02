@@ -2,7 +2,9 @@ require('colors');
 const Task = require('./task');
 
 class Tasks {
-  _list = {};
+  _list = {
+    'abc': 123,
+  };
 
   get listArray() {
     const list = [];
@@ -34,16 +36,25 @@ class Tasks {
     }
   }
 
+  // ? listCompleted(): Show all tasks in custom format
+  /**
+   * It loops through the listArray and prints out the index, description, and state of each task
+   * Example:
+   * 1. Task 1 :: Completed
+   * 2. Task 2 :: Pending
+   */
   listCompleted() {
-    this.listArray.forEach((task, i) => {
-      const idx = `${i + 1}`.green;
+    console.log(); // empty line
+    this.listArray.forEach((task, index) => {
+      const position = `${index + 1}`.green; // '1'
       const { desc, completedIn } = task;
       const state = completedIn ? 'Completed'.green : 'Pending'.red;
-      console.log(`${idx} ${desc} :: ${state}`);
+      console.log(`${position}. ${desc} :: ${state}`);
     });
   }
 
   listPendingCompleted(completed = true) {
+    console.log(); // empty line
     let count = 0;
     this.listArray.forEach(task => {
       const { desc, completedIn } = task;

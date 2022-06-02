@@ -29,7 +29,7 @@ const main = async () => {
     switch (opt) {
       case '1':
         // create task
-        const desc = await readInput('Enter task description: ');
+        const desc = await readInput('Enter task description:');
         tasks.createTask(desc);
         break;
 

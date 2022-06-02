@@ -12,9 +12,13 @@ const readDB = () => {
   }
 
   const info = fs.readFileSync(file, { encoding: 'utf-8' });
-  const data = JSON.parse(info);
-
-  return data;
+  if (!info.length === 0) {
+    const data = JSON.parse(info);
+    return data;
+  } else {
+    const data = [];
+    return data;
+  }
 };
 
 module.exports = {
