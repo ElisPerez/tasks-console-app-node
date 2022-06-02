@@ -1,0 +1,16 @@
+{
+  "name": "tasks-console-app-node",
+  "version": "1.0.0",
+  "description": "A console app of todo list",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elis Antonio Perez <elisperezmusic@gmail.com> (https://www.instagram.com/elisperezmusic)",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.4",
+    "uuid": "^8.3.2"
+  }
+}
