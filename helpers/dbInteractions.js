@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 const file = './db/data.json';
 
 const saveDB = data => {
@@ -11,7 +10,7 @@ const readDB = () => {
     return null;
   }
 
-  const info = fs.readFileSync(file, { encoding: 'utf-8' });
+  const info = fs.readFileSync(file, { encoding: 'utf8' });
   if (!info.length === 0) {
     const data = JSON.parse(info);
     return data;

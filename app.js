@@ -69,8 +69,9 @@ const main = async () => {
 
     // save tasks to db
     saveDB(tasks.listArray);
-
-    await pause();
+    if (opt !== '0') {
+      await pause();
+    }
   } while (opt !== '0');
 };
 

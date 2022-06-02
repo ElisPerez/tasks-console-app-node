@@ -2,9 +2,7 @@ require('colors');
 const Task = require('./task');
 
 class Tasks {
-  _list = {
-    'abc': 123,
-  };
+  _list = {};
 
   get listArray() {
     const list = [];
